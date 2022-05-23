@@ -65,7 +65,7 @@ Rails.application.routes.draw do
   post("/insert_season", { :controller => "seasons", :action => "create" })
           
   # READ
-  get("/", { :controller => "seasons", :action => "index" })
+  get("/", { :controller => "seasons", :action => "homepage" })
 
   get("/seasons", { :controller => "seasons", :action => "index" })
   

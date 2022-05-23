@@ -17,7 +17,7 @@
         </th>
 
         <th>
-          Founding year
+          Country
         </th>
 
         <th>
@@ -25,12 +25,13 @@
         </th>
 
         <th>
-          Stadium
+          Founding year
         </th>
 
         <th>
-          Country
+          Stadium
         </th>
+
       </tr>
 
       <% @list_of_clubs.each do |a_club| %>
@@ -41,7 +42,7 @@
         </td>
 
         <td>
-          <%= a_club.founding_year %>
+          <%= a_club.country %>
         </td>
 
         <td>
@@ -49,11 +50,11 @@
         </td>
 
         <td>
-          <%= a_club.stadium_id %>
+          <%= a_club.founding_year %>
         </td>
 
         <td>
-          <%= a_club.country %>
+          <%= a_club.stadium_id %>
         </td>
 
         <td>
@@ -64,61 +65,5 @@
       </tr>
       <% end %>
     </table>
-  </div>
-</div>
-
-<hr>
-
-<div>
-  <div>
-    <h2>
-      Add a new club
-    </h2>
-
-    <form action="/insert_club" method="post">
-      <div>
-        <label for="club_name_box">
-          Club name
-        </label>
-
-        <input type="text" id="club_name_box" name="query_club_name">
-      </div>
-
-      <div>
-        <label for="founding_year_box">
-          Founding year
-        </label>
-
-        <input type="text" id="founding_year_box" name="query_founding_year">
-      </div>
-
-      <div>
-        <label for="logo_box">
-          Logo
-        </label>
-
-        <input type="text" id="logo_box" name="query_logo">
-      </div>
-
-      <div>
-        <label for="stadium_id_box">
-          Stadium
-        </label>
-
-        <input type="text" id="stadium_id_box" name="query_stadium_id">
-      </div>
-
-      <div>
-        <label for="country_box">
-          Country
-        </label>
-
-        <input type="text" id="country_box" name="query_country">
-      </div>
-
-      <button>
-        Create club
-      </button>
-    </form>
   </div>
 </div>

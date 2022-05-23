@@ -32,6 +32,10 @@
           Season
         </th>
 
+         <th>
+          Details
+        </th>
+
       </tr>
 
       <% @list_of_final_stadia.each do |a_final_stadium| %>
@@ -46,7 +50,7 @@
         </td>
 
         <td>
-          <%= a_final_stadium.stadium_image %>
+          <img src="<%= a_final_stadium.stadium_image %>"height="200">
         </td>
 
         <td>
@@ -65,61 +69,5 @@
       </tr>
       <% end %>
     </table>
-  </div>
-</div>
-
-<hr>
-
-<div>
-  <div>
-    <h2>
-      Add a new final stadium
-    </h2>
-
-    <form action="/insert_final_stadium" method="post">
-      <div>
-        <label for="stadium_name_box">
-          Stadium name
-        </label>
-
-        <input type="text" id="stadium_name_box" name="query_stadium_name">
-      </div>
-
-      <div>
-        <label for="city_box">
-          City
-        </label>
-
-        <input type="text" id="city_box" name="query_city">
-      </div>
-
-      <div>
-        <label for="stadium_image_box">
-          Stadium image
-        </label>
-
-        <input type="text" id="stadium_image_box" name="query_stadium_image">
-      </div>
-
-      <div>
-        <label for="number_of_seats_box">
-          Number of seats
-        </label>
-
-        <input type="text" id="number_of_seats_box" name="query_number_of_seats">
-      </div>
-
-      <div>
-        <label for="season_id_box">
-          Season
-        </label>
-
-        <input type="text" id="season_id_box" name="query_season_id">
-      </div>
-
-      <button>
-        Create final stadium
-      </button>
-    </form>
   </div>
 </div>

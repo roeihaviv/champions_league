@@ -1,4 +1,13 @@
 class SeasonsController < ApplicationController
+  
+  def homepage
+    matching_seasons = Season.all
+
+    @list_of_seasons = matching_seasons.order({ :created_at => :desc })
+
+    render({ :template => "seasons/homepage.html.erb" })
+  end
+
   def index
     matching_seasons = Season.all
 
