@@ -26,17 +26,20 @@ Select Season
         </th>
 
         <th>
+          Winner
+        </th>
+
+        <th>
           Final Stadium
         </th>
 
         <th>
-          Winner
-        </th>
-        
-        <th>
           Top Scorer
         </th>
 
+        <th>
+          Details
+        </th>
 
       </tr>
 
@@ -48,15 +51,15 @@ Select Season
         </td>
 
         <td>
+          <%= a_season.winner_id %>
+        </td>
+
+        <td>
           <%= a_season.stadium_id %>
         </td>
 
         <td>
           <%= a_season.top_scorer_id %>
-        </td>
-
-        <td>
-          <%= a_season.winner_id %>
         </td>
 
         <td>
@@ -112,7 +115,7 @@ Select Season
       </div>
 
       <button>
-        Create season
+        Add season
       </button>
     </form>
   </div>

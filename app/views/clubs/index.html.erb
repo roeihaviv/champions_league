@@ -7,6 +7,67 @@
 </div>
 
 <hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+
+        <th>
+          Club name
+        </th>
+
+        <th>
+          Founding year
+        </th>
+
+        <th>
+          Logo
+        </th>
+
+        <th>
+          Stadium
+        </th>
+
+        <th>
+          Country
+        </th>
+      </tr>
+
+      <% @list_of_clubs.each do |a_club| %>
+      <tr>
+
+        <td>
+          <%= a_club.club_name %>
+        </td>
+
+        <td>
+          <%= a_club.founding_year %>
+        </td>
+
+        <td>
+          <%= a_club.logo %>
+        </td>
+
+        <td>
+          <%= a_club.stadium_id %>
+        </td>
+
+        <td>
+          <%= a_club.country %>
+        </td>
+
+        <td>
+          <a href="/clubs/<%= a_club.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>
 
 <div>
   <div>
@@ -61,90 +122,3 @@
     </form>
   </div>
 </div>
-
-<hr>
-<div>
-  <div>
-    <table border="1">
-      <tr>
-        <th>
-          ID
-        </th>
-
-        <th>
-          Club name
-        </th>
-
-        <th>
-          Founding year
-        </th>
-
-        <th>
-          Logo
-        </th>
-
-        <th>
-          Stadium
-        </th>
-
-        <th>
-          Country
-        </th>
-
-        <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
-        </th>
-
-        <th>
-        </th>
-      </tr>
-
-      <% @list_of_clubs.each do |a_club| %>
-      <tr>
-        <td>
-          <%= a_club.id %>
-        </td>
-
-        <td>
-          <%= a_club.club_name %>
-        </td>
-
-        <td>
-          <%= a_club.founding_year %>
-        </td>
-
-        <td>
-          <%= a_club.logo %>
-        </td>
-
-        <td>
-          <%= a_club.stadium_id %>
-        </td>
-
-        <td>
-          <%= a_club.country %>
-        </td>
-
-        <td>
-          <%= time_ago_in_words(a_club.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(a_club.updated_at) %> ago
-        </td>
-
-        <td>
-          <a href="/clubs/<%= a_club.id %>">
-            Show details
-          </a>
-        </td>
-      </tr>
-      <% end %>
-    </table>
-  </div>
-</div>
-
-<hr>
