@@ -1,0 +1,119 @@
+<div>
+  <div>
+    <h1>
+      List of all seasons
+    </h1>
+  </div>
+</div>
+
+Select Season
+  <select name="query_season_year">
+    <%= Season.all.order(:season_year => :desc).each do |a_season| %>
+      <option value="<%= a_season.id %>">
+        <%= a_season.season_year %>
+      </option>
+    <% end %>
+  </select>
+  
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+
+        <th>
+          Season Year
+        </th>
+
+        <th>
+          Final Stadium
+        </th>
+
+        <th>
+          Winner
+        </th>
+        
+        <th>
+          Top Scorer
+        </th>
+
+
+      </tr>
+
+      <% @list_of_seasons.each do |a_season| %>
+      <tr>
+
+        <td>
+          <%= a_season.season_year %>
+        </td>
+
+        <td>
+          <%= a_season.stadium_id %>
+        </td>
+
+        <td>
+          <%= a_season.top_scorer_id %>
+        </td>
+
+        <td>
+          <%= a_season.winner_id %>
+        </td>
+
+        <td>
+          <a href="/seasons/<%= a_season.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new season
+    </h2>
+
+    <form action="/insert_season" method="post">
+      <div>
+        <label for="season_year_box">
+          Season year
+        </label>
+
+        <input type="text" id="season_year_box" name="query_season_year">
+      </div>
+
+      <div>
+        <label for="stadium_id_box">
+          Stadium
+        </label>
+
+        <input type="text" id="stadium_id_box" name="query_stadium_id">
+      </div>
+
+      <div>
+        <label for="top_scorer_id_box">
+          Top scorer
+        </label>
+
+        <input type="text" id="top_scorer_id_box" name="query_top_scorer_id">
+      </div>
+
+      <div>
+        <label for="winner_id_box">
+          Winner
+        </label>
+
+        <input type="text" id="winner_id_box" name="query_winner_id">
+      </div>
+
+      <button>
+        Create season
+      </button>
+    </form>
+  </div>
+</div>
