@@ -1,14 +1,9 @@
 <h1>Welcome to the Chmapion League App!</h1>
 
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1024px-UEFA_Champions_League_logo_2.svg.png"height="500">
 <div>
-  <div>
-    <h1>
-      List of all seasons
-    </h1>
-  </div>
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1024px-UEFA_Champions_League_logo_2.svg.png"height="500">
 </div>
-
+<br/>
 Select Season
   <select name="query_season_year">
     <%= Season.all.order(:season_year => :desc).each do |a_season| %>
@@ -25,10 +20,6 @@ Select Season
   <hr>
 
   <H2>Knock-out Stage</h2>
-
-  <hr>
-
-  <H2>Winner</h2>
 
   <hr>
 
