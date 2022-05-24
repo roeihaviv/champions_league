@@ -32,6 +32,10 @@
           Number of goals
         </th>
 
+        <th>
+          Player's details
+        </th>
+
       </tr>
       <% @list_of_top_scorers.order(:season_id => :desc).each do |a_top_scorer| %>
       <tr>
@@ -45,7 +49,7 @@
         </td>
 
         <td>
-          <img src="<%= a_top_scorer.player_image %>"height="150">
+          <img src="<%= a_top_scorer.player_image %>"height="150"width="100">
         </td>
 
          <td>
@@ -58,7 +62,7 @@
 
         <td>
           <a href="/top_scorers/<%= a_top_scorer.id %>">
-            Show details
+            <%= a_top_scorer.player_name %>'s details
           </a>
         </td>
       </tr>
