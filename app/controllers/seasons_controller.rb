@@ -2,7 +2,7 @@ class SeasonsController < ApplicationController
   def index
     matching_seasons = Season.all
 
-    @list_of_seasons = matching_seasons.order({ :created_at => :desc })
+    @list_of_seasons = matching_seasons.order({ :season_year => :desc })
 
     render({ :template => "seasons/index.html.erb" })
   end

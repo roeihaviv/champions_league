@@ -13,4 +13,5 @@
 #
 class FinalStadium < ApplicationRecord
 
+  has_many(:seasons, { :class_name => "Season", :foreign_key => "stadium_id", :dependent => :destroy })
 end

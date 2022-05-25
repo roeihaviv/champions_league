@@ -12,5 +12,8 @@
 #  season_id       :integer
 #
 class TopScorer < ApplicationRecord
+  
+  belongs_to(:club, { :required => true, :class_name => "Club", :foreign_key => "club_id" })
 
+  has_many(:seasons, { :class_name => "Season", :foreign_key => "top_scorer_id", :dependent => :destroy })
 end

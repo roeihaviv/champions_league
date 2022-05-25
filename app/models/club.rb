@@ -12,5 +12,8 @@
 #  stadium_id    :integer
 #
 class Club < ApplicationRecord
+  
+  has_many(:seasons, { :class_name => "Season", :foreign_key => "winning_club_id", :dependent => :destroy })
 
+  has_many(:top_scorers, { :class_name => "TopScorer", :foreign_key => "club_id", :dependent => :destroy })
 end

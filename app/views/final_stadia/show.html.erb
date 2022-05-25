@@ -1,22 +1,13 @@
+  <div>
+    <a href="/final_stadia">
+      Go back
+    </a>
+  </div>
 <div>
   <div>
     <h1>
-      Final stadium #<%= @the_final_stadium.id %> details
+      <%= @the_final_stadium.stadium_name %>
     </h1>
-
-    <div>
-      <div>
-        <a href="/final_stadia">
-          Go back
-        </a>
-      </div>
-
-      <div>
-        <a href="/delete_final_stadium/<%= @the_final_stadium.id %>">
-          Delete final stadium
-        </a>
-      </div>
-    </div>
 
     <dl>
       <dt>
@@ -41,7 +32,7 @@
       </dd>
 
       <dt>
-        Number of seats
+        Capacity
       </dt>
       <dd>
         <%= @the_final_stadium.number_of_seats %>

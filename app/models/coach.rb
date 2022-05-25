@@ -10,4 +10,6 @@
 #
 class Coach < ApplicationRecord
 
+  has_many(:seasons, { :class_name => "Season", :foreign_key => "winning_coach_id", :dependent => :destroy })
+
 end

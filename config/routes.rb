@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-
+  get("/search", { :controller => "search", :action => "search" })
   # Routes for the Final stadium resource:
 
   # CREATE
