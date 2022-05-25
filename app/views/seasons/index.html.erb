@@ -16,59 +16,30 @@ Select Season
   </select>
   
 <hr>
-<div>
-  <div>
-    <table border="1">
-      <tr>
-
-        <th>
-          Season Year
-        </th>
-
-        <th>
-          Winner
-        </th>
-
-        <th>
-          Final Stadium
-        </th>
-
-        <th>
-          Top Scorer
-        </th>
-
-        <th>
-          Details
-        </th>
-
-      </tr>
-
-      <% @list_of_seasons.each do |a_season| %>
-      <tr>
-
-        <td>
-          <%= a_season.season_year %>
-        </td>
-
-        <td>
-          <%= a_season.winner_id %>
-        </td>
-
-        <td>
-          <%= a_season.stadium_id %>
-        </td>
-
-        <td>
-          <%= a_season.top_scorer_id %>
-        </td>
-
-        <td>
-          <a href="/seasons/<%= a_season.id %>">
-            Show details
-          </a>
-        </td>
-      </tr>
-      <% end %>
-    </table>
-  </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Season Year</th>
+      <th scope="col">Winner</th>
+      <th scope="col">Stadium</th>
+      <th scope="col">Top Scorer</th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @list_of_seasons.each do |a_season| %>
+    <tr>
+      <td><%= a_season.season_year %></td>
+      <td><%= a_season.winner_id %></td>
+      <td><%= a_season.stadium_id %></td>
+      <td><%= a_season.top_scorer_id %></td>
+      <td>
+        <a href="/seasons/<%= a_season.id %>">
+          Show details
+        </a>
+      </td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>      
 </div>

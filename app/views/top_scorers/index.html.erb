@@ -7,122 +7,33 @@
 </div>
 
 <hr>
-<div>
   <div>
-    <table border="1">
+  <table class="table">
+    <thead>
       <tr>
-
-        <th>
-          Season
-        </th>
-
-        <th>
-          Player name
-        </th>
-
-        <th>
-          Player image
-        </th>
-        
-        <th>
-          Club
-        </th>
-
-        <th>
-          Number of goals
-        </th>
-
-        <th>
-          Player's details
-        </th>
-
+        <th scope="col">Season Year</th>
+        <th scope="col">Player Name</th>
+        <th scope="col">Player Image</th>
+        <th scope="col">Club Year</th>
+        <th scope="col">Number of Goals</th>
+        <th scope="col">Player's Details</th>
       </tr>
-      <% @list_of_top_scorers.order(:season_id => :desc).each do |a_top_scorer| %>
+    </thead>
+    <tbody>
+    <% @list_of_top_scorers.order(:season_id => :desc).each do |a_top_scorer| %>
       <tr>
-
+        <td><%= a_top_scorer.season_id %></td>
+        <td><%= a_top_scorer.player_name %></td>
+        <td><img src="<%= a_top_scorer.player_image %>"height="150"width="100"></td>
+        <td><%= a_top_scorer.club_id %></td>
+        <td><%= a_top_scorer.number_of_goals %></td>
         <td>
-          <%= a_top_scorer.season_id %>
-        </td>
-
-        <td>
-          <%= a_top_scorer.player_name %>
-        </td>
-
-        <td>
-          <img src="<%= a_top_scorer.player_image %>"height="150"width="100">
-        </td>
-
-         <td>
-          <%= a_top_scorer.club_id %>
-        </td>
-
-        <td>
-          <%= a_top_scorer.number_of_goals %>
-        </td>
-
-        <td>
-          <a href="/top_scorers/<%= a_top_scorer.id %>">
-            <%= a_top_scorer.player_name %>'s details
-          </a>
+            <a href="/top_scorers/<%= a_top_scorer.id %>">
+              <%= a_top_scorer.player_name %>'s details
+            </a>
         </td>
       </tr>
-      <% end %>
-    </table>
+    </tbody>
+    <% end %>
+  </table> 
   </div>
-</div>
-
-<hr>
-
-<div>
-  <div>
-    <h2>
-      Add a new top scorer
-    </h2>
-
-    <form action="/insert_top_scorer" method="post">
-      <div>
-        <label for="player_name_box">
-          Player name
-        </label>
-
-        <input type="text" id="player_name_box" name="query_player_name">
-      </div>
-
-      <div>
-        <label for="number_of_goals_box">
-          Number of goals
-        </label>
-
-        <input type="text" id="number_of_goals_box" name="query_number_of_goals">
-      </div>
-
-      <div>
-        <label for="season_id_box">
-          Season
-        </label>
-
-        <input type="text" id="season_id_box" name="query_season_id">
-      </div>
-
-      <div>
-        <label for="player_image_box">
-          Player image
-        </label>
-
-        <input type="text" id="player_image_box" name="query_player_image">
-      </div>
-
-      <div>
-        <label for="club_id_box">
-          Club
-        </label>
-
-        <input type="text" id="club_id_box" name="query_club_id">
-      </div>
-
-      <button>
-        Create top scorer
-      </button>
-    </form>
-  </div>
-</div>

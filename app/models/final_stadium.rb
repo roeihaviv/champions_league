@@ -13,9 +13,4 @@
 #
 class FinalStadium < ApplicationRecord
 
-  belongs_to(:season, { :required => true, :class_name => "Season", :foreign_key => "season_id" })
-
-  has_many(:seasons, { :class_name => "Season", :foreign_key => "stadium_id", :dependent => :destroy })
-
-  # has_many(:clubs, { :class_name => "Club", :foreign_key => "stadium_id", :dependent => :destroy })
 end

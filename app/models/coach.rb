@@ -10,5 +10,4 @@
 #
 class Coach < ApplicationRecord
 
-  belongs_to(:club, { :required => true, :class_name => "Club", :foreign_key => "club_id" })
 end

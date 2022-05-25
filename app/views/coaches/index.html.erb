@@ -7,43 +7,31 @@
 </div>
 
 <hr>
-<div>
+
   <div>
-    <table border="1">
+  <table class="table">
+    <thead>
       <tr>
-
-        <th>
-          Coach name
-        </th>
-
-        <th>
-          Club
-        </th>
-
+        <th scope="col">Coach Name</th>
+        <th scope="col">Coach Image</th>
+        <th scope="col">Club</th>
+        <th scope="col">Details</th>
       </tr>
-
+    </thead>
+    <tbody>
       <% @list_of_coaches.each do |a_coach| %>
       <tr>
-
-        <td>
-          <%= a_coach.coach_name %>
-        </td>
-
-        <td>
-          <%= a_coach.coach_name %>
-        </td>
-
-        <td>
-          <%= a_coach.club_id %>
-        </td>
-
+        <td><%= a_coach.coach_name %></td>
+        <td><%= a_coach.coach_image %></td>
+        <td><img src="<%= a_final_stadium.stadium_image %>"height="200"width="350"></td>
+        <td><%= a_coach.club_id %></td>
         <td>
           <a href="/coaches/<%= a_coach.id %>">
             Show details
           </a>
         </td>
       </tr>
-      <% end %>
-    </table>
+    </tbody>
+    <% end %>
+  </table> 
   </div>
-</div>

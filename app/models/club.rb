@@ -13,11 +13,4 @@
 #
 class Club < ApplicationRecord
 
-  has_many(:top_scorers, { :class_name => "TopScorer", :foreign_key => "club_id", :dependent => :destroy })
-
-  has_many(:coaches, { :class_name => "Coach", :foreign_key => "club_id", :dependent => :destroy })
-
-  has_many(:seasons, { :class_name => "Season", :foreign_key => "winner_id", :dependent => :destroy })
-
-  # belongs_to(:stadium, { :required => true, :class_name => "FinalStadium", :foreign_key => "stadium_id" })
 end
