@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2022_05_25_161652) do
     t.integer "club_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "coach_image"
   end
 
   create_table "final_stadia", force: :cascade do |t|

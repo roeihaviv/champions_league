@@ -1,3 +1,4 @@
+<center>
 <h1>Welcome to the Chmapion League App!</h1>
 <br/>
 
@@ -5,7 +6,7 @@
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1024px-UEFA_Champions_League_logo_2.svg.png"height="500">
 </div>
 <br/>
-Select Season
+<h3>Select Season</h3>
   <select name="query_season_year">
     <%= Season.all.order(:season_year => :desc).each do |a_season| %>
       <option value="<%= a_season.id %>">
@@ -13,27 +14,27 @@ Select Season
       </option>
     <% end %>
   </select>
+</center>
+  <hr>
+
+  <h3>Group Stage</h3>
 
   <hr>
 
-  <H2>Group Stage</h2>
+  <h3>Knock-out Stage</h3>
 
   <hr>
 
-  <H2>Knock-out Stage</h2>
+  <h3>Winner</h3>
 
   <hr>
 
-  <H2>Winner</h2>
+  <h4>Top Scorer</h4>
 
   <hr>
 
-  <H3>Top Scorer</h3>
+  <h4>Final Stadium</h4>
 
   <hr>
 
-  <H3>Final Stadium</h3>
-
-  <hr>
-
-  <H3>Coach</h3>
+  <h4>Coach</h4>
