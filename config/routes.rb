@@ -61,6 +61,10 @@ Rails.application.routes.draw do
 
   # Routes for the Season resource:
 
+
+  get("/this_season", { :controller => "seasons", :action => "this_season" })
+
+  get("/last_season", { :controller => "seasons", :action => "last_season" })
   # CREATE
   post("/insert_season", { :controller => "seasons", :action => "create" })
           

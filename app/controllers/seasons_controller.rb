@@ -16,4 +16,20 @@ class SeasonsController < ApplicationController
 
     render({ :template => "seasons/show.html.erb" })
   end
+
+  def this_season
+    matching_seasons = Season.all
+
+    @list_of_seasons = matching_seasons.order({ :season_year => :desc })
+
+    render({ :template => "seasons/this_season.html.erb" })
+  end
+
+  def last_season
+    matching_seasons = Season.all
+
+    @list_of_seasons = matching_seasons.order({ :season_year => :desc })
+
+    render({ :template => "seasons/last_season.html.erb" })
+  end
 end
