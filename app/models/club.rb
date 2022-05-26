@@ -7,6 +7,7 @@
 #  country       :string
 #  founding_year :string
 #  logo          :string
+#  stadium       :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  stadium_id    :integer

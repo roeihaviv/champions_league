@@ -16,4 +16,45 @@ class ClubsController < ApplicationController
 
     render({ :template => "clubs/show.html.erb" })
   end
+
+  def create
+    the_club = Club.new
+    the_club.club_name = params.fetch("query_club_name")
+    the_club.founding_year = params.fetch("query_founding_year")
+    the_club.logo_img = params.fetch("query_logo_img")
+    the_club.country_name = params.fetch("query_country_name")
+
+    if the_club.valid?
+      the_club.save
+      redirect_to("/clubs", { :notice => "Club created successfully." })
+    else
+      redirect_to("/clubs", { :alert => the_club.errors.full_messages.to_sentence })
+    end
+  end
+
+  def update
+    the_id = params.fetch("path_id")
+    the_club = Club.where({ :id => the_id }).at(0)
+
+    the_club.club_name = params.fetch("query_club_name")
+    the_club.founding_year = params.fetch("query_founding_year")
+    the_club.stadium = params.fetch("query_stadium")
+    the_club.country = params.fetch("query_country")
+
+    if the_club.valid?
+      the_club.save
+      redirect_to("/clubs/#{the_club.id}", { :notice => "Club updated successfully."} )
+    else
+      redirect_to("/clubs/#{the_club.id}", { :alert => the_club.errors.full_messages.to_sentence })
+    end
+  end
+
+  def destroy
+    the_id = params.fetch("path_id")
+    the_club = Club.where({ :id => the_id }).at(0)
+
+    the_club.destroy
+
+    redirect_to("/clubs", { :notice => "Club deleted successfully."} )
+  end
 end

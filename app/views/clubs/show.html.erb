@@ -33,7 +33,7 @@
         Stadium
       </dt>
       <dd>
-        <%= @the_club.stadium_id %>
+        <%= @the_club.stadium %>
       </dd>
 
       <dt>
@@ -74,19 +74,11 @@
       </div>
 
       <div>
-        <label for="logo_box">
-          Logo
-        </label>
-
-        <input type="text" id="logo_box" name="query_logo" value="<%= @the_club.logo %>">
-      </div>
-
-      <div>
         <label for="stadium_id_box">
           Stadium
         </label>
 
-        <input type="text" id="stadium_id_box" name="query_stadium_id" value="<%= @the_club.stadium_id %>">
+        <input type="text" id="stadium_id_box" name="query_stadium" value="<%= @the_club.stadium %>">
       </div>
 
       <div>
