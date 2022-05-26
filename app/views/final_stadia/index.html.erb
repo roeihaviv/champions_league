@@ -13,7 +13,6 @@
         <th scope="col"></th>
         <th scope="col">Stadium Name</th>
         <th scope="col">City</th>
-        <th scope="col">Stadium Image</th>
         <th scope="col">Capacity</th>
         <th scope="col">Season</th>
         <th scope="col">Details</th>
@@ -25,12 +24,11 @@
         <td><%= a_final_stadium.season_id %></td>
         <td><%= a_final_stadium.stadium_name %></td>
         <td><%= a_final_stadium.city %></td>
-        <td><img src="<%= a_final_stadium.stadium_image %>"class="rounded" height="200"width="350"></td>
         <td><%= a_final_stadium.number_of_seats %></td>
         <td><%= a_final_stadium.seasons.first.season_year %></td>
         <td>
             <a href="/final_stadia/<%= a_final_stadium.id %>">
-            Show details
+            Stadium details
           </a>
         </td>
       </tr>

@@ -10,18 +10,17 @@
   <table class="table align-middle table-bordered">
     <thead class="thead-dark">
       <tr>
+        <th scope="col"></th>
         <th scope="col">Coach Name</th>
-        <th scope="col">Coach Image</th>
         <th scope="col">Club</th>
         <th scope="col">Details</th>
       </tr>
     </thead>
     <tbody>
-      <% @list_of_coaches.each do |a_coach| %>
+      <% @list_of_coaches.order(:season_id).reverse_order.each do |a_coach| %>
       <tr>
+        <td><%= a_coach.id %></td>
         <td><%= a_coach.coach_name %></td>
-        <td><%= a_coach.coach_image %></td>
-        <td><img src="<%= a_final_stadium.stadium_image %>"height="200"width="350"></td>
         <td><%= a_coach.club_id %></td>
         <td>
           <a href="/coaches/<%= a_coach.id %>">

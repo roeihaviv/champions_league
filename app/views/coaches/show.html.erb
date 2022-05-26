@@ -1,8 +1,8 @@
 <div>
   <div>
-    <h1>
-      Coach #<%= @the_coach.id %> details
-    </h1>
+    <h2>
+      <%= @the_coach.coach_name %>'s details
+    </h2>
 
     <div>
       <div>
@@ -10,21 +10,15 @@
           Go back
         </a>
       </div>
-
-      <div>
-        <a href="/delete_coach/<%= @the_coach.id %>">
-          Delete coach
-        </a>
-      </div>
-    </div>
-
+      </br>
     <dl>
       <dt>
-        Coach name
+        Coach name: 
       </dt>
-      <dd>
-        <%= @the_coach.coach_name %>
-      </dd>
+        <dd><%= @the_coach.coach_name %></dd>
+        <dd>
+          <img src="<%= @the_coach.coach_image %>"class="rounded" height="400">
+        </dd>
 
       <dt>
         Club
@@ -33,54 +27,6 @@
         <%= @the_coach.club_id %>
       </dd>
 
-      <dt>
-        Created at
-      </dt>
-      <dd>
-        <%= time_ago_in_words(@the_coach.created_at) %> ago
-      </dd>
-
-      <dt>
-        Updated at
-      </dt>
-      <dd>
-        <%= time_ago_in_words(@the_coach.updated_at) %> ago
-      </dd>
-    </dl>
+      </dl>
   </div>
 </div>
-
-<hr>
-
-
-<div>
-  <div>
-    <h2>
-      Edit coach
-    </h2>
-
-    <form action="/modify_coach/<%= @the_coach.id %>"  method="post" >
-      <div>
-        <label for="coach_name_box">
-          Coach name
-        </label>
-
-        <input type="text" id="coach_name_box" name="query_coach_name" value="<%= @the_coach.coach_name %>">
-      </div>
-
-      <div>
-        <label for="club_id_box">
-          Club
-        </label>
-
-        <input type="text" id="club_id_box" name="query_club_id" value="<%= @the_coach.club_id %>">
-      </div>
-
-      <button>
-        Update coach
-      </button>
-    </form>
-  </div>
-</div>
-
-<hr>
