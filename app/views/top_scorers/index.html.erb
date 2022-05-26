@@ -21,7 +21,7 @@
       <tr>
         <td><%= a_top_scorer.seasons.first.season_year %></td>
         <td><%= a_top_scorer.player_name %></td>
-        <td><%= a_top_scorer.club_id %></td>
+        <td><%= a_top_scorer.club.club_name %></td>
         <td><%= a_top_scorer.number_of_goals %></td>
         <td>
             <a href="/top_scorers/<%= a_top_scorer.id %>">
