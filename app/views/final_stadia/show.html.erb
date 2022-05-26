@@ -11,13 +11,6 @@
 
     <dl>
       <dt>
-        Stadium name
-      </dt>
-      <dd>
-        <%= @the_final_stadium.stadium_name %>
-      </dd>
-
-      <dt>
         City
       </dt>
       <dd>
@@ -28,7 +21,7 @@
         Stadium image
       </dt>
       <dd>
-        <img src="<%= @the_final_stadium.stadium_image %>" class="rounded" height="200">
+        <img src="<%= @the_final_stadium.stadium_image %>" class="rounded" height="400">
       </dd>
 
       <dt>
@@ -42,7 +35,7 @@
         Season
       </dt>
       <dd>
-        <%= @the_final_stadium.season_id %>
+        <td><%= @the_final_stadium.seasons.first.season_year %></td>
       </dd>
 
     </dl>

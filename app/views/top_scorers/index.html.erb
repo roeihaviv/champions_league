@@ -19,7 +19,7 @@
     <tbody>
     <% @list_of_top_scorers.order(:season_id => :desc).each do |a_top_scorer| %>
       <tr>
-        <td><%= a_top_scorer.season_id %></td>
+        <td><%= a_top_scorer.seasons.first.season_year %></td>
         <td><%= a_top_scorer.player_name %></td>
         <td><%= a_top_scorer.club_id %></td>
         <td><%= a_top_scorer.number_of_goals %></td>
@@ -33,3 +33,5 @@
     <% end %>
   </table> 
   </div>
+  <br/>
+<center><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1920px-UEFA_Champions_League_logo_2.svg.png" class="rounded" height="200"></center>

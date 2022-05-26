@@ -5,17 +5,7 @@
     </h1>
   </div>
 </div>
-
-Select Season
-  <select name="query_season_year">
-    <%= Season.all.order(:season_year => :desc).each do |a_season| %>
-      <option value="<%= a_season.id %>">
-        <%= a_season.season_year %>
-      </option>
-    <% end %>
-  </select>
-  
-<hr>
+<br/>
 <table class="table align-middle table-bordered">
   <thead>
     <tr>
@@ -23,7 +13,6 @@ Select Season
       <th scope="col">Winner</th>
       <th scope="col">Stadium</th>
       <th scope="col">Top Scorer</th>
-      <th scope="col">Details</th>
     </tr>
   </thead>
   <tbody>
@@ -33,13 +22,10 @@ Select Season
       <td><%= a_season.winner_id %></td>
       <td><%= a_season.stadium_id %></td>
       <td><%= a_season.top_scorer_id %></td>
-      <td>
-        <a href="/seasons/<%= a_season.id %>">
-          Show details
-        </a>
-      </td>
     </tr>
   </tbody>
   <% end %>
 </table>      
 </div>
+<br/>
+<center><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1920px-UEFA_Champions_League_logo_2.svg.png" class="rounded" height="200"></center>
