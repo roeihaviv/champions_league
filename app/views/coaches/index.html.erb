@@ -12,8 +12,7 @@
       <tr>
         <th scope="col"></th>
         <th scope="col">Coach Name</th>
-        <th scope="col">Club</th>
-        <th scope="col">Details</th>
+        <th scope="col">Picture</th>
       </tr>
     </thead>
     <tbody>
@@ -21,10 +20,9 @@
       <tr>
         <td><%= a_coach.id %></td>
         <td><%= a_coach.coach_name %></td>
-        <td><%= a_coach.club_id %></td>
         <td>
           <a href="/coaches/<%= a_coach.id %>">
-            Show details
+            <%= a_coach.coach_name %>'s picture
           </a>
         </td>
       </tr>

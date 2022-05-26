@@ -1,31 +1,21 @@
+     <div>
+        <a href="/coaches">
+          Go back
+        </a>
+      </div>
+
 <div>
   <div>
     <h2>
       <%= @the_coach.coach_name %>'s details
     </h2>
 
-    <div>
-      <div>
-        <a href="/coaches">
-          Go back
-        </a>
-      </div>
       </br>
     <dl>
-      <dt>
-        Coach name: 
-      </dt>
-        <dd><%= @the_coach.coach_name %></dd>
+  
         <dd>
           <img src="<%= @the_coach.coach_image %>"class="rounded" height="400">
         </dd>
-
-      <dt>
-        Club
-      </dt>
-      <dd>
-        <%= @the_coach.club_id %>
-      </dd>
 
       </dl>
   </div>
