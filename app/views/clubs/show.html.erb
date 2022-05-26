@@ -1,31 +1,20 @@
-<div>
+  <div>
+    <a href="/clubs">
+      Go back
+    </a>
+  </div>
+
+
   <div>
     <h2>
-      Club #<%= @the_club.id %> details
+      <%= @the_club.club_name %>'s details
     </h2>
 
     <div>
-      <div>
-        <a href="/clubs">
-          Go back
-        </a>
-      </div>
 
-      <div>
-        <a href="/delete_club/<%= @the_club.id %>">
-          Delete club
-        </a>
-      </div>
-    </div>
 
     <dl>
-      <dt>
-        Club name
-      </dt>
-      <dd>
-        <%= @the_club.club_name %>
-      </dd>
-
+  
       <dt>
         Founding year
       </dt>
@@ -37,7 +26,7 @@
         Logo
       </dt>
       <dd>
-        <%= @the_club.logo %>
+        <img src="<%= @the_club.logo %>" height="300">
       </dd>
 
       <dt>
@@ -54,19 +43,6 @@
         <%= @the_club.country %>
       </dd>
 
-      <dt>
-        Created at
-      </dt>
-      <dd>
-        <%= time_ago_in_words(@the_club.created_at) %> ago
-      </dd>
-
-      <dt>
-        Updated at
-      </dt>
-      <dd>
-        <%= time_ago_in_words(@the_club.updated_at) %> ago
-      </dd>
     </dl>
   </div>
 </div>

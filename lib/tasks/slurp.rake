@@ -3,7 +3,7 @@ namespace :slurp do
   task transactions: :environment do
     require "csv"
 
-    csv_text = File.read(Rails.root.join("lib", "csvs", "db_example.csv"))
+    csv_text = File.read(Rails.root.join("lib", "csvs", "champions_league_database.csv"))
     csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
     csv.each do |row|
       c = Club.new
