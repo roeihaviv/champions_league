@@ -105,6 +105,8 @@ Rails.application.routes.draw do
   # READ
   get("/", { :controller => "seasons", :action => "homepage" })
 
+  get("/user_sign_up", { :controller => "user_authentication", :action => "sign_up_form" })
+
   get("/seasons", { :controller => "seasons", :action => "index" })
   
   get("/seasons/:path_id", { :controller => "seasons", :action => "show" })
