@@ -32,4 +32,12 @@ class SeasonsController < ApplicationController
 
     render({ :template => "seasons/last_season.html.erb" })
   end
+
+  def before_two_season
+    matching_seasons = Season.all
+
+    @list_of_seasons = matching_seasons.order({ :season_year => :desc })
+
+    render({ :template => "seasons/before_two_season.html.erb" })
+  end
 end

@@ -93,6 +93,8 @@ Rails.application.routes.draw do
   get("/this_season", { :controller => "seasons", :action => "this_season" })
 
   get("/last_season", { :controller => "seasons", :action => "last_season" })
+
+  get("/before_two_season", { :controller => "seasons", :action => "before_two_season" })
   # CREATE
   post("/insert_season", { :controller => "seasons", :action => "create" })
           
