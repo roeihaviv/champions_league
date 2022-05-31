@@ -3,6 +3,31 @@
     <button class="btn btn-outline-dark" type="submit" >Go back</button>
   </form>
 </div>
+
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+  <style>
+    .cascading-right {
+      margin-right: -650px;
+    }
+
+    @media (max-width: 991.98px) {
+      .cascading-right {
+        margin-right: 0;
+      }
+    }
+  </style>
+
+ <!-- Jumbotron -->
+  <div class="container py-4">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+  <center>
+
 <div>
   <div>
     <h2>
@@ -16,6 +41,12 @@
       <dd>
         <%= @the_top_scorer.player_name %>
       </dd>
+
+      <dd>
+        <img src="<%= @the_top_scorer.player_image %>"class="rounded" height="300"width="200"></td>
+      </dd>
+
+      <hr>
 
       <dt>
         Number of goals
@@ -32,19 +63,11 @@
       </dd>
 
       <dt>
-        Player image
-      </dt>
-      <dd>
-        <img src="<%= @the_top_scorer.player_image %>"class="rounded" height="300"width="200"></td>
-      </dd>
-
-      <dt>
         Club
       </dt>
       <dd>
         <%= @the_top_scorer.club.club_name %>
       </dd>
-
     </dl>
   </div>
 </div>

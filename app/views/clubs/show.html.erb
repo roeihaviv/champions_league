@@ -28,7 +28,7 @@
             background: hsla(0, 0%, 100%, 0.55);
             backdrop-filter: blur(30px);
             ">
-
+  <center>
   <div>
     <h2>
       <%= @the_club.club_name %>'s details
@@ -40,6 +40,7 @@
       <dd>
         <img src="<%= @the_club.logo %>" height="300">
       </dd>
+      <hr>
 
       <dt>
         Country
@@ -67,7 +68,7 @@
 
 <hr>
 
-
+<% if @current_user != nil %>
 <div>
   <div>
     <h2>
@@ -113,3 +114,6 @@
     </form>
   </div>
 </div>
+<% else %>
+<h5>Sign-in to edit the club's details</h5>
+<% end %>

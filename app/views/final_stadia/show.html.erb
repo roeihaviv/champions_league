@@ -4,10 +4,41 @@
   </form>
 </div>
 <div>
+
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+  <style>
+    .cascading-right {
+      margin-right: -650px;
+    }
+
+    @media (max-width: 991.98px) {
+      .cascading-right {
+        margin-right: 0;
+      }
+    }
+  </style>
+
+ <!-- Jumbotron -->
+  <div class="container py-4">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+  <center>
+
   <div>
     <h2>
       <%= @the_final_stadium.stadium_name %>
     </h2>
+
+    <dd>
+      <img src="<%= @the_final_stadium.stadium_image %>" class="rounded" height="400">
+    </dd>
+
+    <hr>
 
     <dl>
       <dt>
@@ -15,13 +46,6 @@
       </dt>
       <dd>
         <%= @the_final_stadium.city %>
-      </dd>
-
-      <dt>
-        Stadium image
-      </dt>
-      <dd>
-        <img src="<%= @the_final_stadium.stadium_image %>" class="rounded" height="400">
       </dd>
 
       <dt>
