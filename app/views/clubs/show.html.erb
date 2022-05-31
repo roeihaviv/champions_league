@@ -6,6 +6,29 @@
   </div>
 </div>
 
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+  <style>
+    .cascading-right {
+      margin-right: -650px;
+    }
+
+    @media (max-width: 991.98px) {
+      .cascading-right {
+        margin-right: 0;
+      }
+    }
+  </style>
+
+ <!-- Jumbotron -->
+  <div class="container py-4">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+
   <div>
     <h2>
       <%= @the_club.club_name %>'s details
@@ -13,28 +36,9 @@
 
     <div>
 
-
     <dl>
-  
-      <dt>
-        Founding year
-      </dt>
-      <dd>
-        <%= @the_club.founding_year %>
-      </dd>
-
-      <dt>
-        Logo
-      </dt>
       <dd>
         <img src="<%= @the_club.logo %>" height="300">
-      </dd>
-
-      <dt>
-        Stadium
-      </dt>
-      <dd>
-        <%= @the_club.stadium %>
       </dd>
 
       <dt>
@@ -42,6 +46,19 @@
       </dt>
       <dd>
         <%= @the_club.country %>
+      </dd>
+      
+      <dt>
+        Founding year
+      </dt>
+      <dd>
+        <%= @the_club.founding_year %>
+      </dd>
+      <dt>
+        Stadium
+      </dt>
+      <dd>
+        <%= @the_club.stadium %>
       </dd>
 
     </dl>
@@ -96,5 +113,3 @@
     </form>
   </div>
 </div>
-
-<hr>
