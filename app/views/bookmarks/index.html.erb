@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      <%= @current_user.first_name %>'s bookmarks
+      <%= @current_user.first_name %>'s Favorite clubs
     </h1>
   </div>
 </div>
@@ -11,7 +11,7 @@
 <div>
   <div>
     <h2>
-      Add a new bookmark
+      Add a club
     </h2>
 
     <form action="/insert_bookmark" method="post">
@@ -29,9 +29,10 @@
         </select>
 
       </div>
+      <br>
 
-      <button>
-        Bookmark this club!
+      <button type="submit" class="btn btn-dark btn-block mb-4">
+        Add to favorites!
       </button>
     </form>
   </div>
@@ -39,19 +40,19 @@
 
 <hr>
 <div>
-  <div>
-    <table border="1">
+  <div class="col-md-4">
+    <table class="table align-middle table-bordered">
       <tr>
         <th>
           Club
         </th>
 
         <th>
-          Created at
+          Added at
         </th>
 
         <th>
-         
+          Delete from favorites
         </th>
 
       </tr>
