@@ -5,12 +5,11 @@
 #  id         :integer          not null, primary key
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  club_id   :integer
+#  club_id    :integer
 #  user_id    :integer
 #
 class Bookmark < ApplicationRecord
   belongs_to :user, :required => true
   belongs_to :club, :required => true
 
-  # validates :club_id, :presence => true
 end

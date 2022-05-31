@@ -16,16 +16,14 @@
 
     <form action="/insert_bookmark" method="post">
       <div>
-        <label for="movie_id_box">
-          Movie
+        <label for="club_id_box">
+          Club
         </label>
 
-        <%# <input type="text" id="movie_id_box" name="query_movie_id"> %>
-
-        <select name="query_movie_id">
-          <%= Movie.all.order(:title).each do |a_movie| %>
-            <option value="<%= a_movie.id %>">
-              <%= a_movie.title %>
+        <select name="query_club_id">
+          <%= Club.all.order(:club_name).each do |a_club| %>
+            <option value="<%= a_club.id %>">
+              <%= a_club.club_name %>
             </option>
           <% end %>
         </select>
@@ -33,7 +31,7 @@
       </div>
 
       <button>
-        Bookmark this movie!
+        Bookmark this club!
       </button>
     </form>
   </div>
@@ -45,7 +43,7 @@
     <table border="1">
       <tr>
         <th>
-          Movie
+          Club
         </th>
 
         <th>
@@ -62,7 +60,7 @@
       <tr>
 
         <td>
-          <%= a_bookmark.movie.title %>
+          <%= a_bookmark.club.club_name %>
         </td>
 
         <td>
