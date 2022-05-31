@@ -39,17 +39,24 @@
           <%= link_to "Coaches", coaches_path, class: "navbar-brand" %>
         </li>
       </ul>
-  
-      
-      <div class="nav-item">
-          <%= link_to "Sign in", user_sign_in_path, class: "navbar-brand" %>
-        </div>
-        <li class="nav-item">
-          <%= link_to "Sign out", user_sign_out_path, class: "navbar-brand" %>
-        </li>
+
+      <% if @current_user == nil %>
         <li class="nav-item">
           <%= link_to "Sign up", user_sign_up_path, class: "navbar-brand" %>
         </li>
+        <li class="nav-item">
+          <%= link_to "Sign in", user_sign_in_path, class: "navbar-brand" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Bookmarks", href ="/bookmarks", class: "navbar-brand" %>
+        </li>
+        
+         <li class="nav-item">
+          <%= link_to "Sign out", user_sign_out_path, class: "navbar-brand" %>
+        </li>
+      <% end %>
+    </ul>
         
       </form>
     </div>
