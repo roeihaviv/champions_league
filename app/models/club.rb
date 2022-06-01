@@ -22,4 +22,5 @@ class Club < ApplicationRecord
 
   has_many :bookmarkers, :through => :bookmarks, :source => :users
 
+  validates(:club_name, { :presence => true })
 end
