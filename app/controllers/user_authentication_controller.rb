@@ -48,7 +48,7 @@ class UserAuthenticationController < ApplicationController
    
       redirect_to("/", { :notice => "User account created successfully."})
     else
-      redirect_to("/user_sign_up", { :alert => "@user.errors.full_messages.to_sentence" })
+      redirect_to("/user_sign_up", { :alert => "Email is already taken, try again" })
     end
   end
     
