@@ -4,6 +4,12 @@
   </form>
 </div>
 
+  <center>
+    <h2>
+      <%= @the_top_scorer.player_name %>
+    </h2>
+  </center>
+
 <!-- Section: Design Block -->
 <section class="text-center text-lg-start">
   <style>
@@ -28,19 +34,8 @@
             ">
   <center>
 
-<div>
-  <div>
-    <h2>
-      <%= @the_top_scorer.player_name %>
-    </h2>
-
     <dl>
-      <dt>
-        Player name
-      </dt>
-      <dd>
-        <%= @the_top_scorer.player_name %>
-      </dd>
+    <br/>
 
       <dd>
         <img src="<%= @the_top_scorer.player_image %>"class="rounded" height="300"width="200"></td>
