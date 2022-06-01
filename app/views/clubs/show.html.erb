@@ -74,19 +74,19 @@
     <h2>
       Edit club
     </h2>
-
+  
     <form action="/modify_club/<%= @the_club.id %>"  method="post" >
       <div>
         <label for="club_name_box">
           Club name
         </label>
-
+      
         <input type="text" id="club_name_box" name="query_club_name" value="<%= @the_club.club_name %>">
       </div>
 
       <div>
         <label for="founding_year_box">
-          Founding year
+          Founding Year
         </label>
 
         <input type="text" id="founding_year_box" name="query_founding_year" value="<%= @the_club.founding_year %>">
@@ -107,10 +107,11 @@
 
         <input type="text" id="country_box" name="query_country" value="<%= @the_club.country %>">
       </div>
-
-      <button>
+      <br/>
+      <button type="submit" class="btn btn-dark btn-block mb-4">
         Update club
       </button>
+      
     </form>
   </div>
 </div>
