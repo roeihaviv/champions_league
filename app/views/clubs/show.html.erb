@@ -65,6 +65,12 @@
       <dd>
         <%= @the_club.stadium %>
       </dd>
+      <dt>
+        Country
+      </dt>
+      <dd>
+        <%= @the_club.country %>
+      </dd>
 
     </dl>
   </div>
@@ -72,44 +78,45 @@
 
 <hr>
 
+
 <% if @current_user != nil %>
 <div>
   <div>
     <h2>
       Edit club
     </h2>
-  
+
+  <div class="col-lg-6 mb-5 mb-lg-0">
     <form action="/modify_club/<%= @the_club.id %>"  method="post" >
       <div>
         <label for="club_name_box">
           Club name
         </label>
-      
-        <input type="text" id="club_name_box" name="query_club_name" value="<%= @the_club.club_name %>">
+        <input type="text" class="form-control" id="club_name_box" name="query_club_name" value="<%= @the_club.club_name %>">
       </div>
-
+      <br/>
       <div>
         <label for="founding_year_box">
           Founding Year
         </label>
 
-        <input type="text" id="founding_year_box" name="query_founding_year" value="<%= @the_club.founding_year %>">
+        <input type="text" class="form-control" id="founding_year_box" name="query_founding_year" value="<%= @the_club.founding_year %>">
       </div>
-
+      <br/>
       <div>
         <label for="stadium_id_box">
           Stadium
         </label>
-
-        <input type="text" id="stadium_id_box" name="query_stadium" value="<%= @the_club.stadium %>">
+        <br/>
+        <input type="text" class="form-control" id="stadium_id_box" name="query_stadium" value="<%= @the_club.stadium %>">
       </div>
-
+      <br/>
       <div>
         <label for="country_box">
           Country
         </label>
 
-        <input type="text" id="country_box" name="query_country" value="<%= @the_club.country %>">
+        <input type="text" class="form-control" id="country_box" name="query_country" value="<%= @the_club.country %>">
       </div>
       <br/>
       <button type="submit" class="btn btn-dark btn-block mb-4">
